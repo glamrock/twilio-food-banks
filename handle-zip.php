@@ -10,7 +10,7 @@
 	{
 		$db = new PDO('sqlite:ivr.sqlite');
 
-		$stmt = $db->prepare('SELECT address FROM packages WHERE zip=?');
+		$stmt = $db->prepare('SELECT address FROM foodbank WHERE zip=?');
 		$stmt->execute(array($zip));
 		
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
